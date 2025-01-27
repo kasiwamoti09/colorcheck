@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>色選択</title>
+    <link rel="stylesheet" href="color_check.css">
+</head>
+<body>
+  <div id="parent">
+    <div id="child1">
+      <div class="colorselect">
+        <div class="color-container">
+          <p>ベースカラー:　</p>
+          <div class="color-box1" style="background-color: hsl(0, 0%, 100%);" onclick="changeColor('hsl(0, 0%, 100%)')"></div>
+          <div class="color-box1" style="background-color: hsl(0, 0%, 98%);" onclick="changeColor('hsl(0, 0%, 98%)')"></div>
+          <div class="color-box1" style="background-color: hsl(0, 0%, 95%);" onclick="changeColor('hsl(0, 0%, 95%)')"></div>
+          <div class="color-box1" style="background-color: hsl(0, 0%, 0%);" onclick="changeColor('hsl(0, 0%, 0%)')"></div>
+        </div>
+
+        <div class="splitcolor">
+          <div class ="splitcolor1">
+            <div class="container">
+              <!-- カラー入力 -->
+              <div class="picker-container_1">
+                <label for="colorPicker_1">上画面の色を選択:</label>
+                <input type="color" id="colorPicker_1" value="#ff0000" />
+              </div><!--picker-container_1-->
+                            
+              <!-- 選択色表示 -->
+              <div class="color-display">                
+                <div class="color-box">
+                  <p>選択した色</p>
+                  <div id="selectedColorBox_1" class="color-preview_1"></div>
+                  <span id="selectedColorHex_1">#FF0000</span>
+                </div><!--color-box-->
+              </div><!--color-display-->
+                        
+              <hr style="margin: 20px 0;" />
+                        
+              <!-- スプリットコンプリメンタリー4色表示 -->
+              <div class="color-display">
+                <div class="color-row">
+                  <div class="color-box">
+                    <p>lightcolor</p>
+                    <div id="lightToneSplit1Box_1" class="color-preview_1"></div>
+                    <span id="lightToneSplit1Hex_1">#??????</span>
+                  </div>
+  
+                  <div class="color-box">
+                    <p>Splitcolor</p>
+                    <div id="splitComp1Box_1" class="color-preview_1"></div>
+                    <span id="splitComp1Hex_1">#??????</span>
+                  </div><!--color-box-->
+    
+                  <div class="color-box">
+                    <p>darkcolor</p>
+                    <div id="darkToneSplit1Box_1" class="color-preview_1"></div>
+                    <span id="darkToneSplit1Hex_1">#??????</span>
+                  </div>
+                </div><!--color-row-->
+              </div><!--color-display--> 
+
+              <div class="color-display">
+                <div class="color-row">
+                  <div class="color-box">
+                    <p>lightcolor</p>
+                    <div id="lightToneSplit2Box_1" class="color-preview_1"></div>
+                    <span id="lightToneSplit2Hex_1">#??????</span>
+                  </div>
+                          
+                  <div class="color-box">
+                    <p>Splitcolor</p>
+                    <div id="splitComp2Box_1" class="color-preview_1"></div>
+                    <span id="splitComp2Hex_1">#??????</span>
+                  </div><!--color-box-->
+    
+                  <div class="color-box">
+                    <p>darkcolor</p>
+                    <div id="darkToneSplit2Box_1" class="color-preview_1"></div>
+                    <span id="darkToneSplit2Hex_1">#??????</span>
+                  </div>
+                </div><!--color-row-->
+              </div><!--color-display-->  
+
+            </div><!--container-->
+          </div><!--splitcolor1-->     
+    
+    
+          <div class ="splitcolor2">
+            <div class="container">
+              <!-- カラー入力 -->
+              <div class="picker-container_2">
+                <label for="colorPicker_2">下画面の色を選択:</label>
+                <input type="color" id="colorPicker_2" value="#ff0000" />
+              </div><!--picker-container_2-->
+                              
+              <!-- 選択色表示 -->
+              <div class="color-display">
+                <div class="color-box">
+                  <p>選択した色</p>
+                  <div id="selectedColorBox_2" class="color-preview_2"></div>
+                  <span id="selectedColorHex_2">#FF0000</span>
+                </div><!--color-box-->
+              </div><!--color-display-->
+              
+
+              <hr style="margin: 20px 0;" />
+                          
+              <!-- スプリットコンプリメンタリー4色表示 -->
+              <div class="color-display">
+                <div class="color-row">
+                  <div class="color-box">
+                    <p>lightcolor</p>
+                    <div id="lightToneSplit1Box_2" class="color-preview_2"></div>
+                    <span id="lightToneSplit1Hex_2">#??????</span>
+                  </div>
+
+                  <div class="color-box">
+                    <p>Splitcolor</p>
+                    <div id="splitComp1Box_2" class="color-preview_2"></div>
+                    <span id="splitComp1Hex_2">#??????</span>
+                  </div><!--color-box-->
+  
+                  <div class="color-box">
+                    <p>darkcolor</p>
+                    <div id="darkToneSplit1Box_2" class="color-preview_2"></div>
+                    <span id="darkToneSplit1Hex_2">#??????</span>
+                  </div>
+                </div><!--color-row-->
+              </div><!--color-display--> 
+              
+              <div class="color-display">
+                <div class="color-row">
+                  <div class="color-box">
+                    <p>lightcolor</p>
+                    <div id="lightToneSplit2Box_2" class="color-preview_2"></div>
+                    <span id="lightToneSplit2Hex_2">#??????</span>
+                  </div>
+                          
+                  <div class="color-box">
+                    <p>Splitcolor</p>
+                    <div id="splitComp2Box_2" class="color-preview_2"></div>
+                    <span id="splitComp2Hex_2">#??????</span>
+                  </div><!--color-box-->
+    
+                  <div class="color-box">
+                    <p>darkcolor</p>
+                    <div id="darkToneSplit2Box_2" class="color-preview_2"></div>
+                    <span id="darkToneSplit2Hex_2">#??????</span>
+                  </div>
+                </div><!--color-row-->
+              </div><!--color-display-->
+            </div><!--container-->
+          </div><!--split2-->
+        </div><!--splitcolor-->
+      </div><!--colorselect-->
+
+    </div><!--child1-->
+    
+    <div id="child2">
+      <div class="color_sample">
+        <!--１つ目のプレゼン-->
+        <div class="display-box" id="displayBox_1">
+          <div class="title" id ="title_1">タイトル</div>
+          <div class="naiyou">
+            <div class="explan_1" id ="explan_1">説明文</div>
+            <div class="arrow_1" id = "arrow_1"></div>
+            <div class="figure_1" id = "figure_1"></div>
+          </div><!--naiyou-->
+
+          <div class="mainother1_1" id="mainColorBox_1"></div>
+          <div class="mainother2_1" id="mainColorBox2_1"></div>
+        </div><!--display-box-->
+
+        <!--２つ目のプレゼン-->
+        <div class="display-box" id="displayBox_2">
+          <div class="title" id ="title_2">タイトル</div>
+          <div class="naiyou">
+            <div class="explan_2" id ="explan_2">説明文</div>
+            <div class="arrow_2" id = "arrow_2"></div>
+            <div class="figure_2" id = "figure_2"></div>
+          </div><!--naiyou-->
+
+          <div class="mainother1_2" id="mainColorBox_2"></div>
+          <div class="mainother2_2" id="mainColorBox2_2"></div>
+        </div><!--display-box-->
+
+        <div>
+          文字色変更:　
+          <button onclick="changeTextColor('black')">黒</button>
+          <button onclick="changeTextColor('gray')">グレー</button>
+          <button onclick="changeTextColor('white')">白</button>
+        </div>
+        
+          
+        <div class="text_input">
+          <div class = inputtitle>タイトル　:　<input type="text" id="textInput" placeholder="タイトルを入力"></div>
+        </div><!--text_input-->
+          
+        <div class = inputexplan>  説明文　　:　<!--<input type="text" id="textInput2" placeholder="説明文">-->
+          <textarea id="textInput2" placeholder="説明文を入力"></textarea>
+        </div><!--inputexplan-->
+      </div><!--colorsample-->
+    </div><!--child2-->
+  </div><!--parent-->
+  <script src="new_color_check.js"></script>
+</body>
+</html>
