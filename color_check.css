@@ -1,0 +1,252 @@
+#parent {
+  margin: 5% 0% 5% 0%;
+}
+
+#child1 {
+    background-color: white;
+    /* 水平・垂直方向の中央揃え */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #child2 {
+    /* 水平・垂直方向の中央揃え */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (min-width: 600px) {
+    #parent {
+      display: flex;
+    }
+    #child1{
+      width: 60%; /* 各子要素の幅を45%ずつにする */
+    }
+    #child2 {
+        width: 40%; /* 各子要素の幅を55%ずつにする */
+      }
+  }
+
+.color-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.color-box1 {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+
+.display-box {
+  font-weight: bold;
+  border: solid 3px #000000;
+  width: 640px;
+  height: 360px;
+  border: 1px solid black;
+  position:relative;
+  margin:50px;
+}
+
+.color-row {
+  display: flex; /* 子要素を横並びに */
+  justify-content: space-between; /* 子要素間を均等に配置 */
+  align-items: center; /* 縦方向の中央揃え */
+  gap: 10px; /* 各要素間の間隔 */
+}
+
+.mainother1{
+  height:100px;
+  background: #ffffff;
+}
+
+.outer {
+  margin-top: 20px;
+  padding: 50px;
+  width: 300px;
+  background: #ffffff;
+  box-shadow: 0 0 8px gray;
+}
+
+/*上のバー*/
+#mainColorBox_1,#mainColorBox_2{
+  position: absolute; /* display-box の中で配置 */
+  width:640px;
+  height:30px;
+  top: 4%;           /* 縦方向中央 */
+  left: 50%;          /* 横方向中央 */
+  transform: translate(-50%, -50%); /* 完全中央揃え */
+  background-color: #FF0000; /* 半透明に設定 */
+  /*padding: 15px 20px;*/
+  /*border: 1px solid black;*/
+  /*text-align: center;
+  font-family: Arial, sans-serif;*/
+  z-index: 2;         /* 背景より前面に表示 */
+}
+
+/*下のバー*/
+#mainColorBox2_1,#mainColorBox2_2{
+  position: absolute; /* display-box の中で配置 */
+  width:640px;
+  height:30px;
+  top: 96%;           /* 縦方向中央 */
+  left: 50%;          /* 横方向中央 */
+  transform: translate(-50%, -50%); /* 完全中央揃え */
+  background-color: #FF0000; /* 半透明に設定 */
+  /*padding: 15px 20px;*/
+  /*border: 1px solid black;*/
+  /*text-align: center;
+  font-family: Arial, sans-serif;*/
+  z-index: 2;         /* 背景より前面に表示 */
+}
+
+/*説明、矢印、図を含んだ内容の部分*/
+.naiyou{
+  /*padding:10px;
+  display: flex; /* フレックスボックスで横並びを指定 */
+  /*align-items: center; /* 縦方向の中央揃え */
+  /*gap: 10px; /* 各要素間の間隔を10pxに設定 */
+
+  padding: 10px;
+  display: flex; /* 横並びを指定 */
+  align-items: flex-start; /* 子要素を上揃え */
+  gap: 10px; /* 子要素間の間隔 */
+  flex-wrap: wrap; /* 子要素が折り返されるように設定 */
+}
+
+/*矢印*/
+#arrow_1,#arrow_2 {
+  position: absolute; /* display-box の中で配置 */
+  display: inline-block;
+  width: 90px;
+  height: 60px;
+  clip-path: polygon(0 30.9%, 54% 30.9%, 54% 0, 100% 50%, 54% 100%, 54% 69.1%, 0 69.1%);
+  top: 60%;           /* 縦方向中央 */
+  left: 50%;          /* 横方向中央 */
+  transform: translate(-50%, -50%); /* 完全中央揃え */
+  background-color: #0080ff; /* 半透明に設定 */
+  /*padding: 15px 20px;*/
+  /*border: 1px solid black;*/
+  /*text-align: center;
+  font-family: Arial, sans-serif;*/
+  z-index: 2;         /* 背景より前面に表示 */
+}
+
+/*右側の図*/
+#figure_1,#figure_2 {
+  position: absolute; /* display-box の中で配置 */
+  width:130px;
+  height:180px;
+  top: 60%;           /* 縦方向中央 */
+  left: 80%;          /* 横方向中央 */
+  transform: translate(-50%, -50%); /* 完全中央揃え */
+  background-color: #FF0000; /* 半透明に設定 */
+  /*padding: 15px 20px;*/
+  /*border: 1px solid black;*/
+  /*text-align: center;
+  font-family: Arial, sans-serif;*/
+  z-index: 2;         /* 背景より前面に表示 */
+}
+
+
+.splitcolor {
+  display: flex; /* 子要素を横並びにする */
+  gap: 20px; /* 要素間の間隔 */
+}
+
+.splitcolor1,.splitcolor2 {
+  flex: 1; /* 均等に幅を割り当てる */
+  max-width: 50%; /* 必要に応じて最大幅を指定 */
+  box-sizing: border-box; /* パディングやボーダーを含めたサイズ計算 */
+}
+
+
+/* コンテナ */
+.container {
+  text-align: center;              /* コンテナ内のテキストなどを中央寄せ */
+  background: #fff;                /* コンテナの背景色を白に設定 */
+  padding: 20px;                   /* コンテナの内側余白を20pxに設定 */
+  border-radius: 10px;             /* コンテナの角を10pxの円弧で丸める */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* ぼんやりとした影を付けて立体感を演出 */
+  width: 90%;                      /* 画面幅の80%をコンテナの幅とする */
+  max-width: 1000px;                /* コンテナの最大幅を600pxに制限する */
+}
+
+/* カラー入力部分 */
+.picker-container_1,.picker-container_2 {
+  margin-bottom: 20px;
+}
+
+.color-box {
+  text-align: center;
+  margin: 20px;
+}
+
+/* カラー表示エリア */
+.color-display {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.color-preview_1,.color-preview_2 {
+  width: 70px;
+  height: 70px;
+  margin: 5px auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer; /* クリック可能な状態を示す */
+}
+
+span {
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+
+
+/* 説明文のスタイル */
+.explan_1,.explan_2 {
+  margin-left:20px;
+  padding: 10px;
+  max-width: 220px; /* 必要に応じて最大幅を設定 */
+  word-wrap: break-word; /* 長い単語を折り返す */
+  white-space: pre-wrap; /* 改行や余白をそのまま反映する */
+  flex-grow: 1; /* 空きスペースを利用して広がる */
+}
+
+/* テキスト入力エリア */
+textarea {
+  width: 90%;
+  height: 80px;
+  resize: none; /* サイズ変更を禁止（必要に応じて調整可能） */
+  padding: 5px;
+  font-size: 14px;
+}
+
+
+.input {
+  padding: 8px;
+  font-size: 16px;
+  width: 300px;
+}
+
+#title_1,#title_2{
+  padding-top:50px;
+  text-align: center;
+  font-size:40px;
+}
+
+.text_input{
+  margin-top:20px;
+
+}
+
